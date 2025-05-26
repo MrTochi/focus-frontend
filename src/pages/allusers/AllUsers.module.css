@@ -1,0 +1,77 @@
+.container {
+  padding: 2rem;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tableWrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+
+.table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background-color: var(--light-color);
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.table tr:nth-child(even) {
+  background-color: var(--background-color);
+}
+
+.deleteBtn {
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.deleteBtn:disabled {
+  background-color: var(--border-color);
+  color: #999;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .table th,
+  .table td {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .deleteBtn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}

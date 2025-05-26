@@ -1,0 +1,149 @@
+.page {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.primaryBtn:hover {
+  background-color: var(--dark-color);
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.secondaryBtn:hover {
+  background-color: var(--dark-color);
+}
+
+.imageContainer {
+  text-align: center;
+  border-radius: 8px;
+  height: 400px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--light-color);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  max-width: 300px;
+  flex: 1;
+  text-align: left;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .imageContainer {
+    height: 300px;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}

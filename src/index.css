@@ -1,0 +1,77 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+
+  --text-color: #212529;
+  --border-color: #ced4da;
+  --background-color: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #ccc;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* loading screen overlay */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* spinner using a pseudo-element */
+.loading-screen::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+/* the “Restoring session…” text */
+.loading-screen p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* keyframes for spinner rotation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.focus {
+  border-radius: 300px;
+}

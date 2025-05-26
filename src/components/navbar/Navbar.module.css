@@ -1,0 +1,96 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.links {
+  width: fit-content;
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.greeting {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.menuIcon {
+  cursor: pointer;
+  display: none;
+}
+
+.FaBars,
+.FaTimes {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: relative;
+    padding: 16px 10px;
+  }
+  .links {
+    display: none;
+  }
+
+  .active {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    background-color: var(--text-color);
+    padding: 32px 24px;
+    width: 100%;
+    z-index: 1000;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    animation: slideIn 0.3s forwards;
+  }
+
+  .menuIcon {
+    display: block;
+    z-index: 9999;
+  }
+
+  .links li {
+    width: 100%;
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 10px 0;
+  }
+
+  .links a {
+    opacity: 0.7;
+  }
+
+  @keyframes slideIn {
+    to {
+      transform: translateX(0);
+    }
+  }
+}
