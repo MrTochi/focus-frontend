@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import Forbidden from "./forbiden/Forbidden";
+import Forbidden from "../forbiden/Forbidden";
 
 const PrivateRoute = ({ children, requiredRole }) => {
   const [isChecking, setIsChecking] = useState(true);

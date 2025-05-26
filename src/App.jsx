@@ -20,7 +20,7 @@ import EditTodo from "./pages/editTodos/EditTodo";
 import Settings from "./pages/settings/Settings";
 import VerifyEmail from "./pages/verifyEmail/VerifyEmail";
 import NotFound from "./helpers/notfound/NotFound";
-import PrivateRoute from "./helpers/privateRoute";
+import PrivateRoute from "./helpers/privateRoute/PrivateRoute";
 
 const App = () => {
   const dispatch = useDispatch();
