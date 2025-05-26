@@ -1,4 +1,4 @@
-const backendDomain = "http://localhost:5000";
+const backendDomain = "https://focus-backend-q1ve.onrender.com";
 
 export const apiArray = {
   // ==== AUTH ROUTES ====
